@@ -44,11 +44,7 @@ val dev = new {
     .get
 
   // Which version should be used in IntelliJ
-  val ideScala = props.getProperty("ide.scala") match {
-    case "2.12" => versions.scala212
-    case "2.13" => versions.scala213
-    case "3"    => versions.scala3
-  }
+  val ideScala = versions.scala3
   val idePlatform = props.getProperty("ide.platform") match {
     case "jvm"    => VirtualAxis.jvm
     case "js"     => VirtualAxis.js
