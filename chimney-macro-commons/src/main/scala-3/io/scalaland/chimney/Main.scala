@@ -4,10 +4,16 @@ object hello {
 
   object World {
     case class User(name: String, address: String)
+
+    trait SomeTrait {
+      val name: String
+
+      def someMethod(): String
+    }
+
   }
 
-  export World.User
+  export World.{SomeTrait, User}
 }
 
 case class UserName(name: String)
-
